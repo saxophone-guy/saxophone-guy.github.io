@@ -1,4 +1,5 @@
-<script type="x-shader/x-fragment">#version 300 es
+<script type="x-shader/x-fragment">
+#version 300 es
 precision highp float;
 out vec4 O;
 uniform float time;
@@ -35,7 +36,8 @@ void main(void) {
 	}
   col*=pow(.5/abs(sin((length(uv)+.05)*dot(col,col))),.125);
 	O=vec4(col,1);
-}</script>
+}
+</script>
 <script>
 window.onload = init
 function init() {
